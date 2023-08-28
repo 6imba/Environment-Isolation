@@ -1,0 +1,8 @@
+# Docker Installation:
+	- If your OS is #WindowPro,Mac,Linux you can directly download & install Docker.
+	- But if your OS is #WindowHome you need to:
+		- Enable some of Window Features (Hyper-V,Containers, Virtualization),
+		- Download & install VirtualBox first,
+		- then DockerToolBox
+		- 
+	- wsl_update_x64.msi

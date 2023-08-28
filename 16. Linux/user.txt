@@ -1,0 +1,8 @@
+# Users in LInux:
+	- regular user -> self /home 
+	- root user -> full access | sudo | sudo su | 
+	
+# One linux system can have mutiple users.
+	- So mutiple people can have their own workspace in same system.
+	
+# user | groups | permission

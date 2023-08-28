@@ -1,0 +1,166 @@
+# Containerization:
+	- Containerization is also referred as "Container Stuffing" or "Container Loading".
+	- Containerization is a form of virtualization where applications run in isolated user spaces, called containers, while using the same shared operating system (OS).
+	- When you bulit a webapp,REST_Services, you use many other module, library, framework etc with thier respective version
+	- And at the time of delpoyment of those webapp,REST_Services into the server, you need to know all packages of your project.
+	- 
+
+- Like Goggle company provibe E-mail_services as Gmail. Same way Docker provides containers_services using containerization concept.
+
+# Docker:
+	- Company that provies containers.
+
+# Machine <- Docker_Containner <- Docker_Image <- Docker_File 
+	- Docker_Image: Blueprint for a Docker_Containner
+	-  
+
+# Virtualization vs Containnerization.
+
+# Docker_Hub: Hub that host online remote docker_image repository.
+
+# Development -> Testing -> Deployment
+
+# Development: Product(HLL, Framework, Libraries, Dependencies, OS_level_features & their version)
+	- ship product to testing team.
+# Testing: Product(Dependencies & their version)
+	
+# Hypvervisor vs Docker:
+
+------------------------------------
+
+Hardware
+Host_OS
+Hypervisor
+Virtualization with OS_ISO
+Virtual_Machine(Guest_OS): Product(Program_Code,Dependencies&Version) + OS.
+Application
+
+------------------------------------
+
+Hardware
+Host_OS
+Docker_Engine
+Containnerization with images
+Containner(Guest_Application): Product(Program_Code,Dependencies&Version)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+- Container is like a Virtual Machine.
+- Docker is the name of company that owns many Docker_products or has Docker_ecosystem among which Docker_engine is one of them.
+- Docker_engine is the tool with the help of which we create containner.
+
+- VMware is the name of company that owns many VMware_products or has VMware_ecosystem such as VMware_hypervisor, VMware_Client.
+
+- DevOps: Development and Operational.
+	- Development, Testing, Operational(Production)
+
+- Product: Program_Code + Dependencies&Version. 
+- VM: Product + OS
+- Development_Team can share VM to Testing_Team, by creating template/image of VM.
+- Testing_Team will boot/start/run the shared VM into thier environment.
+- Download -> Install -> Run Application.
+
+- Containerization is the advance version of Virtualization.
+- 
+
+- https://www.youtube.com/watch?v=vWjP3fsfgrw ===> 24:40
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+1. Virtualization architecture VS Containnerization architecture.
+	- https://www.youtube.com/watch?v=A0g7I4A6GN4
+	- https://www.youtube.com/watch?v=pR-cGS6IGvI
+
+# What is Docker?
+# How does it works?
+# Why is DockerEngine's Containner better than Hypervisor's VirtualMachine?
+
+- When a developer used to develop an application, it worked fine in its own environment.
+- But when the same application is shifted to production it wouldnt work properly.
+- This occurs due to difference in the computing environment of Development and Production.
+- Environment: Availability of dependencies and thier corresponding version.
+
+- Implementation of MicroService Architecture.
+
+# References:
+	- https://www.youtube.com/watch?v=zfclTRtKOSM
+	- 
+	
+# Docker, DockerContainerEngine, DockerFile, DockerImage, DockerContainer.
+
+# No pre-allocation of resources for containner, instead Containner takes resources according to needs of application.
+
+# Microservices, Events, Docker.
+
+# Deployment of application/microservices via virtualization & containerization.
+
+# Docker Engine: Docker_Client <-- REST API --> Docker_Daemon
+
+# Docker Architecture:
+	- Hardware_Resources
+	- Host_OS
+	- Docker_Container_Engine
+	- Conatiner1(Program+Libraries+Dependencies), Conatiner2(Program+Libraries+Dependencies), Conatiner3(Program+Libraries+Dependencies)
+
+# Program: python, node.js, php, etc.
+
+# Docker container vs Virtual Environment.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Virtualization: H/w level Virtualization, Pre-Allocation of H/w resources, Hypervisor, Virtual Machine with Guest_OS, OS_ISO file for Guest_OS,
+# Cotainnerization: OS|S/w level virtualization, No pre-Allocation of OS resources, Docker Engine, Containner with light_weight_OS + Host_OS, Docker_image for Docker_containner.
+
+# Virtual Machine: Abstraction of Machine, Use_Self_OS, 
+# Container: Isolated Environment, Use_Host_OS, 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Image ---Run---> Containner.
+# Containner ---Share---> Image.
+
+# Image: Paused state of Containner.
+# Containner: Running state of Image.
+
+# Light weight application: Application that uses less resources of your device while running.
+
+# General term: President(HeavyWeight) & Citizen(LightWeight).
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Docker Flow:
+	- Developer -> Docker_File(DependenciesList) -> Docker_Engine/Daemon -> Docker_Image -> Docker_Containner.
+							     			     -> Pull/Push -> Docker_Hub/Registry
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Docker_Containner: Layered file system.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Docker Ecosystem : Docker_Client, Docker_Daemon/Server/Engine, Docker_Hub/Registry, Docker_Image/Template/Blueprint, Docker_Compose, Set of S/w or Packages.
+
+# Docker user can interact with Docker_Daemon via tool called Docker_Client. Docker_Client uses CLI & Rest API.
+
+# Docker_Hub/Registry: Public_Registry & Private_Registry.
+
+# Docker_Image/Template/Blueprint: Read only binary file. Single file with all dependencies wrapped inside. 
+
+# Ways to create image:
+	- Pull image from Docker_Hub.
+	- Create image from Docker_File.(build command)
+	- Create image from existing Docker_Containner running on your system.
+
+# Docker_Containner: Docker_Images become Docker_Containner when they run on Docker_Engine.
+
+# Modification is done in Docker_Containner not in Docker_Images.
+
+	- Hardware
+	- Host_OS
+	- Docker_Daemon/Server/Engine
+	- Containnerization with images
+	- Containner(Guest_Application): Product(Program_Code,Dependencies&Version)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+

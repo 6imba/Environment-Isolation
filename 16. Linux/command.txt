@@ -1,0 +1,21 @@
+$ sudo apt update
+$ sudo apt upgrade
+$ mv orgfilename newfilename
+$ ls -R
+$ ls -a | -l | -t | -r
+$ touch .hideenfilename
+$ history
+$ echo | printf
+$ sudo apt install <appname> | Ubuntun Software
+$ top
+$ ps
+$ kill 
+$ 
+
+$ sudo kill $(sudo lsof -t -i:3306)
+$ sudo netstart -lnp
+$ sudo lsof -i -P -n | grep LISTENED
+$ xtrlock ==> loc keyboard
+
+# shortcut:
+	- ctrl + l ==> clear terminal

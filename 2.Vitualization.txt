@@ -1,0 +1,156 @@
+# Virtualization:
+
+- virtual(general): almost or nearly as described, but not completely or according to strict definition.
+- virtual(computing): not physically existing as such but made by software to appear to do so.
+
+- virtual image: mirror image. (real image vs virtual image)
+	- Q. Difference between virtual and proxy.
+
+- virtualization: Virtualization is the creation of a virtual -- rather than actual -- version of something, such as an operating system (OS), a server, a storage device or network resources.
+		  Virtualization process uses software to create a virtual system that simulates hardware_functionality.
+
+- The Three Types of Virtualization: Presentation virtualization, Virtual Desktop Infrastructure (VDI), Application virtualization.
+
+- emulator? simulator? virualization?
+
+- virtual, virtualization, virtual machine/computer/environment, virtual box, 
+
+- Virtual box:
+	- open_scource_software.
+	- use to create a one or many virtual_machine/computer/system in your computer,laptop,system.
+	- then install any kind of OS(window,unix_linux,Mac,uBuntu,solaris,IBM,andriod,iosetc) inside each virtual_machine or virtual_box.
+	- for that you need install ISO file of respective OS inside your virtual_machine or virtual_box.
+	- ISO file? Window's ISO file? ISO image? Bootable USB?
+
+- In summary, when you want to use more than one OS in single computer_system, performe virtualization using Virtual Box.
+
+- Archive file: zip,rar,apk,iso ==> compression, 
+
+- Open Virtual Box, Create Virtual Machine, 
+
+- server_virtualization, desktop_virtualization,
+
+- Virtual Machine: VMs
+
+- VMware
+
+- virtual vs proxy.
+
+- Hypervisor: Software that creates or runs VMs.
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+Virtual_OS(Window,Linux,MacOS)
+VirtualMachine'VMs'
+Virtualization: Hypervisor(OrcalVirtualBOX,VMware Server and Workstation, Microsoft Virtual PC, KVM, QEMU and Parallels, etc)
+Host_Primary_OS(Window,Linux,MacOS)
+Harware_component/resources(ProcessorCPU,Storage,RAM,etc)
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+- Hypervisor: Type1(Bare Metal) & Type2(Hosted)
+
+- Type1(Bare Metal):
+	- Hardware_resources
+	- Hypervisor(VMware vSphere/ESXi, Xen/Citrix XenServer)
+	- OSs
+	- Software
+
+- Type2(Hosted):
+	- Hardware_resources
+	- Host_Primary_OS
+	- Hypervisor(OrcalVirtualBOX,etc)
+	- Hosted_Secondary_OS
+	- Software
+
+# Reference:
+	- https://www.youtube.com/watch?v=pDr26zf4qz4
+	- 
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+# Virtualization:
+	- Virtual Machine is like the OS in itself running on top of Host_OS.
+	- Virtual Machine is created using Hypervisor(VirtualBox, VMware), where each VM is assigned with certain_amount of set of hardware resources.
+	- Its like matrix effect, real_world(Host_OS & Total_Hardware_Resources) is hidden from you as we will be interacting with fake_wolrd(Virtual Machine).
+	- This concept make new business model possible called Cloud Computing. (https://www.youtube.com/watch?v=GOuVeZmMee0 ==> 4:00)
+	- Pre-allocation of resources.
+
+# Advantages:
+	- OS Isolation
+	- Platform Independence
+	- Cost Saving
+
+# Porblem:
+	- Pre-allocation of resources.
+
+# Solution:
+	- Containerization.
+
+# Hardware Resources:
+	- Memory
+	- I/O
+	- Processor
+	- Disk
+
+# Conatinerization:
+	- App Isolation
+	- Mounting and Unmounting.
+	- 
+
+# Docker:
+
+# Purpose of Virtualization:
+	- Solve the problem of under utilize resources by creating virtualization_layer/virtual_machine/virtual_computer between hardware component and app.
+	- vitualization creates virtual hardware components for VM.
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+# Computer and its configuration(I5 10TH gen, 16 GB, 2TB, 256 SSD).
+
+# Virtualization in term of harware_management, is the technique of splitting/syncing a physical_hardware_resources into as many logical_hardware_resources OR syncing a many physical_hardware_resources into as a single logical_hardware_resources as we want.
+
+# Virtualize Data_Center in cloud computing.
+
+# https://www.youtube.com/watch?v=-VxzIIsFXFY.
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+# Data Center consist of many different server for different purpose.
+
+# Cost: cpex(Capital Expenditure) & opex(Operational Expenditure)
+
+# Application of concept of virtualization in differrent field.
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+- Physical: HOST_Machine
+- Virtualization_layer
+- Logical: Guest_VM, Guest_VM, Guest_VM, ....
+
+- Physical_Server(RAM:64GB, PROCESSOR:32core, HHD:2TB)
+- Hypervisor(VMware_Workstation, Oracle_VirtualBox)
+- Virtual_Billing_Server1(RAM:4GB, PROCESSOR:2core, HHD:250GB)_with_OS1, Virtual_AD_Server2(RAM:8GB, PROCESSOR:6core, HHD:500GB)_with_OS2, Virtual_DHCP_Server3(v16GB, PROCESSOR:8core, HHD:750GB)_with_OS3.
+
+- Here each VM act is an isolated individual physical server.
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+- https://www.youtube.com/watch?v=WTNMOwyUJzQ&list=PLBGx66SQNZ8aiuWzEFavDMpQ1RRWsZLZV&index=2
+
+# Hypervisor:
+	- Type1(BM/Native Hypervisor) ==> VMware Vsphere ESXi, Microsoft HyperV, Citrix XenServer, etc.
+	- Type2(Hosted Hypervisor) ==> VMware Workstation, Microsoft Virtual PC, Oracle VirtualBox, etc.
+
+# Type1: Physical_HOST_Machine | Type1_Hypervisor_as_Firmware | Guest_OS_VM .
+	- direct access to resources.
+
+
+# Type2: Physical_HOST_Machine | Host_OS| Type2_Hypervisor_as_Software | Guest_OS_VM.
+	- no direct access to resources.
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,11 @@
+touch Dockerfile
+*** write instruction ***
+touch testcopyfile1
+touch test
+ls
+tar -cvf test.tar test
+ls
+gzip test.tar (not working)
+rm -rf test (not working)
+
+- echo $nickName

@@ -1,0 +1,98 @@
+# Ways to create image:
+	1. Pull image from Docker_Hub.
+	2. Create image from Docker_File.(build command)
+	3. Create image from existing Docker_Containner running on your system.
+
+1. Pull image from Docker_Hub.
+	1>Docker_Hub -- 2>Docker_Image -- 3>Docker_Containner
+		* work on Docker_Containner.
+		* again create image of this current running/working container.
+		* then share this image and again create containner using this image.
+		* this caotainer will have all the files as it is.
+
+2. Create image from Docker_File.(build command):
+	1>Docker_File -- 2>Docker_Image -- 3>Docker_Containner
+
+3. Create image from existing Docker_Containner running on your system.
+
+------------------------------------------------------------------------------------------------------------------------------
+
+1.1 Pull image from Docker_Hub Command:
+	a> docker run -it --name container_name_1 image_name /bin/bash  ==> (create a conatiner with metioned_image and run it)
+		- ls
+		- cd dir_name
+		- touch file_name
+		- exit
+	*** work on created containner ***
+	b> docker diff container_name_1 ==> (see the changes you have made on containner till now after it was created)
+		- Output:
+			- C: change
+			- A: append
+			- D: delete
+	c> docker commit container_name_1 new_image_name1 ==> (create image of mentioned container)
+	*** - docker images (see if image is created or not) ***
+	*** - (push created image into docker_hub) ***
+	d> docker run -it --name containner_name1.1 new_image_name1 (create container from self created image)
+
+2. Create image from Docker_File.(build command):
+	- Docker_File is simply a text file that contains set of instruction.
+		- thing we need to docker
+		- how will be the structure of image
+		- mention OS, files, software and many more dependencies that needs to be installed.
+	- you can either create own Docker_File and create Docker_Image with that particular Docker_File
+		OR
+	- just create Docker_Image with already avialable Docker_File.
+	- default naming of docker file is Dockerfile.
+		Q. Can we create Docker_File with avialable Docker_Image?
+	- instruction in Docker_File is always UPPERCASE. (FROM, RUN, MAINTAINER, COPY, ADD, EXPOSE, WORKDIR, CMD, COPY, ENTRYPOINT, ENV, ARG)
+	- FROM: base image: (pre avialable OS image)
+	- RUN: layer
+	- MAINTAINER: author name
+	- COPY: copy file from local system(Docker daemon) but not download from internet.
+		- COPY . /app: COPY <app_source_code_file_path> <directory_of_containner>
+	- ADD: download file from internet in archive format and extract it.
+	- EXPOSE: expose logical port.
+	- WORKDIR: when container is created firstly take to mentioned directory.
+	- CMD: execute command at the time when containner is being created.
+	- ENTRYPOINT: same as CMD but pioritizemore.
+	- ENV: environment variable
+	- ARG: argument(ARG instruction defines a variable that can be passed at build time. Once it is defined in the Dockerfile you can pass with this flag --build-arg while building the image.)
+
+	- Docker_File -> Docker_Image -> Docker_Containner
+		Q. Can we create multiple Docker_Image with same Docker_File? (Duplicate image allowed with same name or diffrent name)
+	- vi Docker_File ??? linux
+
+	a> create Dockerfile
+	b> add instruction inside Dockerfile.
+		- FROM: base image/ mention os of container/ base OS/ (pre avialable OS image)
+			- FROM OS_name
+			- FROM OS_name:version
+			- FROM ubuntu
+			- FROM ubuntu:16.2.01
+		- RUN:
+			- RUN echo "Hello from  Simba" > /tmp.testfile
+			- Here, testfile is a text file inside tmp dir of a container. So this RUN echo "Hello from  Simba" >/tmp.testfile will add text("Hello from  Simba") inside this file(testfile).
+	c> Create image using this Dockerfile.
+		- docker build -t image_name dockerFile_path
+		- docker build -t image_name . (here . means current directory)
+			- docker build -t simba/nameemail-nodeapi:v1 .
+	d> Create containner using this image.
+		- docker run -it --name container_name_1 image_name /bin/bash  ==> (create a conatiner with metioned_image and run it)
+		(docker run -it image_name)
+			- l
+			- ls
+			- cd tmp
+			- cat testfile ********************** here you can see the use of RUN command
+			- exit
+
+3. Create image from existing Docker_Containner running on your system.
+	c> docker commit container_name_1 new_image_name1 ==> (create image of mentioned container)
+	*** - docker images (see if image is created or not) ***
+
+------------------------------------------------------------------------------------------------------------------------------
+> docker run -it --name con -d -p 8006:8006 simba06/node-api:version_1
+> docker run -it simba06/node-api:version_1
+> docker run -it --name container_name_1 fed3d1ff4afa
+> docker run -it --name container_name_1 simba06/node-api:version_1
+> docker run -it --name container_name_1 simba06/node-api:version_1 /bin/bash
+> docker run -it -p 8006:8006 simba06/node-api:version_1

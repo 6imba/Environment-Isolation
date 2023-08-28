@@ -1,0 +1,60 @@
+> containnerize the existing NodeJS application using docker.
+> containnerize the existing (NodeJS Web API which returns your name and email address) into image using docker.
+> create a (linux) docker image with Web API which returns your name and email address.
+> bundle NodeAPP with docker containner.
+
+> NodeAPP
+> Docker Image
+    - intall Node
+    - install npm
+    - copy node.js source code(NodeAPP)
+    - install npm modules
+    - expose the port
+    - make containner executable.
+
+- intall Node:> RUN apk add --no--cache nodejs npm
+    - apk is package manager for alpine linux.(m is package manager for centOS.)
+    - --no-cache: prevent caching installed nodejs and save space/size of containner.
+
+- WORKDIR /app: mention the working directory inside our docker containner.
+    - create /app directory inside our docker image.
+
+- COPY . /app: copy source code inside current dir to /app directory of containner.
+
+- EXPOSE 8006: mention/expose the port where our application in containner is gonna run.
+
+    - till now all dependencies for nodeapp are setted inside container.
+    - but we cant run the containner application beacause we have not provided the command to be run when our containner is created out of this docker image. So make conatinner from this image executable.
+    - So for that ENTRYPOINT [ "executable" ]
+
+- ENTRYPOINT [ "node" ]: when ever new containner is created from this image fire the command "node".
+
+- CMD ["node_api.js"]: and provide the following arguments.
+
+    - docker build -t simba/node-api:version_1 .
+
+    - Create container from this created image
+    - problem: (docker run -it simba/node-api:version_1)
+
+- Expose port.
+    - docker run -it -d -p 8006:8006 simba/node-api:version_1
+    - docker ps
+
+- Create Repository in DockerHub with name "simba06/node-api".
+
+- docker tag simba06/node-api:version_1 simba06/node_api:version_1
+- docker push simba06/node-api:version_1
+
+- Pull and run docker image from hub:
+    - docker run -it -d -p 8006:8006 simba06/node-api:version_1
+
+# Reference:
+    - https://www.youtube.com/watch?v=B7HNhe-dcFk
+    - https://pkgs.alpinelinux.org/packages?name=nodejs&branch=edge
+
+
+    docker tag local-image:tagname new-repo:tagname
+docker push new-repo:tagname
+
+To push a new tag to this repository,
+docker push simba06/node-api:tagname

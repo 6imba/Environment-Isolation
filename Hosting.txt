@@ -1,0 +1,65 @@
+Hosting:
+
+* shop needs physical space so that customer can access/buy their products. So ower of shop either built their own building/store-room or rent a room/place/flat to seel products.
+Like wise we need space/platform so that we can make our product avialable to endusers .
+* space to make our product accessible to all
+# here come the hosting concept(web hosting is one of the service of internet where we are able to rent SPACE on internet, where we store all of our media(text,files,images,vedio etc) and finally go live with our website)
+# here all of our media are stores on physical server located somwewhere thats connected to internet. You need your data to store somewhere.
+# So web hosting companies have building full with these servers, that provides you other services along with storing(data storage). Like design-platform, security, customer-support, and many more.
+
+1. What hosting does normal website, ncell, hamro patro, tottle, online khabar use?
+
+2. Hosting means to  store & host files,application,website,software on server so that they can be accessible(online) to other nodes in a network.
+
+3. Hosting Types on the basis of => Normal Level Hosting, Mediun Level Hosting, Advance Level Hosting(VPS:Digital-Ocean/ ).
+3. Hosting Types on the basis of => Shared, Resseler, VPS, Dedicated, Cloud, Managed Wordpress
+
+4. Share hosting.
+
+5. Things to actknowledge while choosing hosting service: Storage, RAM, Bandwidth, SSL certificate(hhtps), Price.
+
+6. How to determine hosting type for a project?
+
+7. Upgrading Software.
+
+8. Hamro-Patro & Tottle is using VPS Hosting of Digital-Ocean. (Advance Level Hosting)
+
+9. Ncell is using cloud(GoggleCloudPlatform, AWS, MicrosoftAzure) of Alibaba.(Advance Level Hosting)
+Hosting_Provider_Companies
+
+
+
+
+#Domain Name:
+	- Web hosting is not to be confused with buying a domain name!
+	- Buying a host is like renting a room and buying domain is like registering an unique address for your shop.
+
+
+
+Domain provider company & Hosting_Provider_Companies.
+ICAN => Approved Registrates/Domain provider company(GoDaddy) => Clients
+Extension of domain: .com, .net, .np etc
+
+
+domain(domain-name) ----- DNS server -----> IP address
+DNS server maps domain-name to ip_address of web_host_storage.
+
+
+Domain => name of website.
+Hosting => Location where websites files gets stored and hosted.
+
+
+
+what determines hosting speed ??? traffic??? bandwidth??? disk space???
+
+
+
+
+
+Reference:
+https://www.youtube.com/watch?v=H8oAvyqQwew
+https://www.youtube.com/watch?v=A_BKChujwTc
+
+
+
+

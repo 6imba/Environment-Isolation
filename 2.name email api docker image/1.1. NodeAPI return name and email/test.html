@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body>
+    <script>
+        // fetch('http://localhost:8006/')
+        //     .then(res => console.log(res))
+
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", "http://localhost:8006/" ); //prepare HTTP-Request to be sent
+        xhr.send(); // .send start connection and sends HTTP-Request.
+        xhr.onload = () => {//handle the http-response when loaded.
+        console.log(xhr.response); // get response-data of requested HTTP-Request using property of xhr object called xhr.response. // you will get a long string(JSON-Data) as data typically exchanged in JSON formate when talking to API. Here also we are talking to dummy API: "https://reqres.in/api/users?page=2".
+    };
+    </script>
+</body>
+</html>

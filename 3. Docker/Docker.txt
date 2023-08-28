@@ -1,0 +1,73 @@
+- Docker.INC is a company that provies various services among which Containnerization is also one of them.
+- Docker provides Containnerization service using Docker_Engine that creates Docker_Containner via Docker_Image(Product+Docker_File).
+- Product>Docker_File>Docker_Engine>Docker_Image>Docker_Containner.
+
+# Ways to create image:
+	- Pull image from Docker_Hub.
+	- Create image from Docker_File.
+	- Create image from existing Docker_Containner.
+
+# Docker Flow:
+	- Developer -> Docker_File(DependenciesList) -> Docker_Engine/Daemon -> Docker_Image -> Docker_Containner.
+							     			     -> Pull/Push -> Docker_Hub/Registry
+
+- Containerize/Dockerize your Project.
+
+# Docker Installation:
+	- If your OS is #WindowPro,Mac,Linux you can directly download & install Docker. (uses Hyper-V technology)
+	- But if your OS is #WindowHome you need to:
+		- Enable some of Window Features (Hyper-V,Containers, Virtualization),
+		- Download & install VirtualBox first,
+		- then DockerToolBox
+		- 
+	- 
+
+# Conatiner: Product(Program_SourcesCode,Dependencies) + Resources(Hardware_Component,OS).
+
+# Docker Ecosystem of all Docker Products:
+	- Docker Client, Docker Server, Docker Machine, Docker Hub, Docker Compose etc.
+
+# By using all of these Docker Ecosystem Products we containerize our application.
+
+# Conatiner is an isolated environment that has its own respective resources, software.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Docker Ecosystem:
+
+	- Docker_User <==> Docker_Client(CLI) <==> Docker_Server(Daemon) <==> Cache/Docker_Hub.
+
+	- Docker_User: Person
+	- Docker_Client(CLI) is tool we issue command to for reaching out to Docker_Server(Daemon).
+	- Docker_Server(Daemon) is service that runs on top of our Host_OS, which is responsible for operating containers.
+	- Cache/Docker_Hub: Docker_Iamge store .
+	- Docker_Image is just a file that acts as a blueprint/template that hold all the required data/information/dependencies/configuration that is needed to create/setup Docker_Container. Simply Docker_Image just hold data/information/dependencies/configuration of Docker_Container, which is not assigned with any resources(Hardware_Component).
+	- Docker_Containner is an isolated environment that has its own respective resources(Hardware_Component) allocated where we manipulate our product(Apllication+Dependencies).
+	- Docker_Hub: Free service for remote Docker_Image repository.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Create docker_containner of docker_image.
+	- docker run image_name: pull docker_image/docker_file, create container and start container.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Example: Build a Docker Image.
+	- Create a (linux) docker image with Web API which returns your name and email address.
+
+	- Sample docker image can be found at seyongo/whoami
+		- Try the sample.
+			> docker pull seyongo/whoami:latest
+			> docker run -it --rm -p 8080:80 --name sample seyongo/whoami:latest
+			- Browse http://localhost:8080/api/email and see what it returns.
+		
+			- Output:
+				{
+				    "displayName":"Se Yong Oh",
+				    "emailAddress":"seyong@seyong.net"
+				}
+
+	- Create your own docker image which returns your name and email address, then publish it to Dockerhub.
+	- What to submit: A text file including the link to your own dockerhub image.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,101 @@
+# General Term:
+	- Dock: an enclosed area of water in a port for the loading, unloading, and repair of ships.
+	- Docker: a person employed in a port to load and unload ships.
+
+# Docker Moto: Built, Share OR Deploy, Run OR Create -> Application
+
+# Is Docker Containner and Django Virtual Environment same?
+
+Q. why do we need docker?
+	- pack all dependencies of product with product into container when shipping product from development to testing and production level.
+	- dependencies based on programming language.(Framework, Library, Module, PL, Extra_other_dependencies & their version). Extra_other_dependencies_that you are not aware of but is present in your developemnt system.
+	- dependencies based on operating system. ---solution---> hypervisor.
+	- Developer just dont give/ship product to testing team instead give/ship whole image of product that consist all the required dependencies.
+	- if product work on your machine it will work in any other manchine too.
+
+Q. Hypervisor vs Docker.
+	- Hypervisor: 
+		- all VMs will install new_guest_OS with own kernel.
+		- pre-allocation of harware component
+		- Hardware level virtualization.
+	- Docker: 
+		- all containner will have a new_guest_OS that will be using the share_kernel_of_host_OS.
+		- allocate harware component as requirement.
+		- Software/Apllication/OS level virtualization.
+
+# Docker_Inc, Docker_Engine, Docker_Conatiner, Docker_File, Docker_Image, Dokcer_Hub.
+
+# Install Docker in different OS platform: unbuntu linux, kali linux, window, macOS, etc.
+	- Turn Windows Features on or off: Hyper-V
+
+# Docker Command:
+	- docker version (Docker has two component client and Server)
+	- docker --version
+	- docker run hello-world ==> search docker_image in loacal_docker_engine if not avaialable then search in dockerhub & if avialable download docker_image from dockerHUb & create conatinner & run image. (Docker_deamon will streamed output to Docker_client)
+	- docker ps ==> show active conatinner
+	- docker ps -a ==> show all container (docker ps -a, docker ps -all, docker ps --all)
+	- docker stop containner_id
+	- dcoker kill containner_id
+	- docker create image_name
+	- docker start "create_string"
+	- docker start -a "create_string" 
+	- docker logs containner_id
+	- docker images
+	- docker images
+	- docker image ls ==> list of images avialable in locally(Docker_daemon)
+	- docker rmi image_ID/Name ==> delete local image
+	- docker rm containner_ID/Name ==> delete conatinner
+	- docker image pull image_name:tag --> docker image pull ubuntu:latest
+	- docker run -it ubuntu /bin/bash
+	- docker build -t simba/nameemail-nodeapi:v1 . ==> built docker image
+	- docker run -d -p 8006:8006 simba/nameemail-nodeapi:v1
+	- docker run -d -p 8006:8006 0ba23e4d5de5
+	- docker container
+	- docker container ls
+	- docker run busybox ls
+	- docker exec -i -t container_id sh
+	- docker build .
+	- docker build -t simba/alpine-redis:v1 . ==> bulit image with name using active docker file
+	- docker run -it alpine sh
+	- docker commit -c 'CMD "redis-server"' 84fc22b5dde0
+	- docker build -t simba/alpine-redis:v1 .
+	- docker run simba/node-api:v1
+	
+# Command & flags.
+
+# Docker Desktop vs Docker Toolbox?
+
+# Is Docker same as Docker desktop?
+	- Docker Desktop includes Docker Engine, Docker CLI client, Docker Compose, Docker Content Trust, Kubernetes, and Credential Helper.
+
+# If you're running macOS or Windows you have a few options for installing Docker.
+	- Docker for Mac / Windows (now known as Docker Desktop)
+	- Docker Toolbox
+	- Running your own Virtual Machine and installing Docker yourself
+	- Reference: https://nickjanetakis.com/blog/should-you-use-the-docker-toolbox-or-docker-for-mac-windows
+
+# Docker CLI client & Docker Engine/Server Daemon
+
+# command -> docker_client -> docker_server(cache: images->containner) -> docker_hub
+# docker_file(plain text) -> docker_client -> docker_server -> docker_image -> docker_hub
+
+# docker_file -> docker_images -> docker_containner
+# docker_images(seed) & docker_containner(tree)
+
+# Window 10 pro has Hyper-V feature so no need of Hypervisor.
+
+# docker_images has snap_shot of all the files_with_their_dependencies&version && startup command.
+	- docker_images: filesystem_snap_shot+ default_startup_command_to_start_indexfiles.
+
+# Images:
+	- docker run hello-world
+	- docker run busybox
+	- docker run ubuntu
+
+# docker run ==> docker create image_name+ docker start "create_string"
+# docker run ==> docker create image_name+ docker start -a "create_string"
+
+# docker command tags:
+	- docker built -t user_name/image_names:version .
+
+# community images.

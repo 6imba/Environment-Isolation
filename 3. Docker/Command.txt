@@ -1,0 +1,14 @@
+> docker --version
+> docker version
+> docker run -d -p 80:80 docker/getting-started
+> docker run hello-world
+> docker images
+> docker search jenkins
+> docker ps
+> docker ps -a
+> docker stop conatiner
+> docker images
+> docker run image_name
+> 
+
+- jenkins, redis, 
