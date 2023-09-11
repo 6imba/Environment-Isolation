@@ -1,2 +1,2 @@
 # Environment-Isolation
-Technologies like WSL (Windows Subsystem for Linux), VM (Virtual Machine), Docker, and dual boot is "environment isolation" or "software isolation."
+Technologies like WSL (Windows Subsystem for Linux), VM (Virtual Machine), Docker, and dual boot is "environment isolation" or "software isolation." These technologies are used to create isolated environments for running different operating systems or software applications on a single physical machine. They allow you to run multiple environments separately, each with its own set of resources and configurations, without interfering with one another. This isolation is particularly useful for development, testing, and running applications in various environments on the same hardware.

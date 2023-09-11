@@ -1,2 +1,4 @@
 -  Virtualization & Containerization in Development.
 -  Virtualization & Containerization in Deployment
+
+for what purpose is the terms Virtualization & Containerization is used for?

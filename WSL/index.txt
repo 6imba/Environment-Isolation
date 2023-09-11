@@ -1,0 +1,15 @@
+Local Installation:
+    or, Redis server from the official website (https://redis.io/download)
+    or, use a package manager like apt for Ubuntu
+    or, use a package manager like brew for macOS
+    or, there is no way to install redis in window, instead you need to go via WSL
+
+
+# More technically, WSL lets you run unmodifiesd L64 Linuxbinaries on Windows.
+https://www.youtube.com/watch?v=sqdHy1rC2t4&ab_channel=MicrosoftDeveloper
+https://learn.microsoft.com/en-us/windows/wsl/install
+
+# cmd:
+ > wsl
+ > wsl -l -v
+ >
